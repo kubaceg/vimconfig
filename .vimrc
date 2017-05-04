@@ -42,15 +42,22 @@ vmap <C-_> gcgv
 imap <C-_> <ESC>gcc
 
 "Set theme
-colorscheme new-railscasts
+if &term =~? 'mlterm\|xterm\|xterm-256\|screen-256'
+    let &t_Co = 256
+	colorscheme new-railscasts
+endif
 set background=dark
 
 set number
 set numberwidth=2
-
 set laststatus=2
-
 set hlsearch
+
+" tabs and spaces handling
+ set expandtab
+ set tabstop=4
+ set softtabstop=4
+ set shiftwidth=4
 
 map <F3> :NERDTreeTabsToggle<CR>
 map <F4> :NERDTreeFind<CR>
