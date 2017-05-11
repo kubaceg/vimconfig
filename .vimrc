@@ -13,14 +13,15 @@ Plug 'tpope/vim-commentary'
 Plug 'matze/vim-move'
 Plug 'sickill/vim-pasta'
 Plug 'justinmk/vim-sneak'
-
 Plug 'terryma/vim-smooth-scroll'
+Plug 'kien/ctrlp.vim'
 
 "Theme
 Plug 'carakan/new-railscasts-theme'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'kien/tabman.vim'
@@ -29,8 +30,13 @@ Plug 'kien/tabman.vim'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'godlygeek/tabular'
 Plug 'ervandew/supertab'
+Plug 'c9s/phpunit.vim'
+Plug 'kubaceg/vim-php-refactoring-toolbox'
 
-Plug 'kien/ctrlp.vim'
+Plug 'othree/xml.vim'
+"Misc
+Plug 'gabrielelana/vim-markdown'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 
@@ -52,6 +58,7 @@ set number
 set numberwidth=2
 set laststatus=2
 set hlsearch
+set exrc
 
 " tabs and spaces handling
  set expandtab
@@ -92,3 +99,6 @@ let g:ctrlp_prompt_mappings = {
 
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 set encoding=utf-8
+
+map <F10> :PHPUnitRunAll<CR>
+map <C-t> :PHPUnitSwitchFile<CR>
